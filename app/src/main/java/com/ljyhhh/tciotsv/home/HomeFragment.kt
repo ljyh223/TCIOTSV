@@ -1,10 +1,8 @@
 package com.ljyhhh.tciotsv.home
 
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +14,8 @@ import androidx.fragment.app.Fragment
 import com.ljyhhh.tciotsv.R
 import com.ljyhhh.tciotsv.home.adapter.ChannelAdapter
 import kotlinx.android.synthetic.main.activity_home_fragment.view.*
-import kotlin.random.Random
+import org.eclipse.paho.android.service.MqttAndroidClient
+import com.ljyhhh.tciotsv.home.mqtt.MQTTHelper
 
 
 class HomeFragment : Fragment() {
@@ -32,6 +31,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view=inflater.inflate(R.layout.activity_home_fragment,container,false)
+        context?.let { MQTTHelper.connect(it) }
         mGridView=view.findViewById(R.id.channel1)
 
         return view

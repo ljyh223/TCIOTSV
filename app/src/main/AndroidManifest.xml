@@ -13,6 +13,9 @@
         android:theme="@style/Theme.TCIOTSV"
         tools:targetApi="31">
         <activity
+            android:name=".home.utils.SerialLibrary"
+            android:exported="false" />
+        <activity
             android:name=".SettingFragment"
             android:exported="false">
             <meta-data
