@@ -1,0 +1,12 @@
+<!-- bubble_button_bg.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:shape="oval">
+    <solid android:color="#C4000000"  />
+    <gradient
+        android:angle="135"
+        android:type="linear"
+        android:startColor="#a0f8d2"
+        android:centerColor="#57b7c0"
+    android:endColor="#497491" />
+</shape>
